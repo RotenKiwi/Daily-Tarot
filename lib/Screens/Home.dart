@@ -1,3 +1,4 @@
+import 'package:daily_tarot/Components/RoundedButton.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -68,7 +69,7 @@ class Home extends StatelessWidget {
               width: size.width,
               child: Stack(alignment: Alignment.center, children: <Widget>[
                 Positioned(
-                    left: size.width*0.1,
+                    left: size.width * 0.1,
                     child: Container(
                       child: Transform.rotate(
                         angle: -0.27,
@@ -79,7 +80,7 @@ class Home extends StatelessWidget {
                       ),
                     )),
                 Positioned(
-                    right: size.width*0.1,
+                    right: size.width * 0.1,
                     child: Transform.rotate(
                       angle: 0.27,
                       child: Image.asset(
@@ -93,9 +94,18 @@ class Home extends StatelessWidget {
                     height: size.height * 0.35,
                   ),
                 ),
-
               ]),
-            ))
+            )),
+        Positioned(
+          top: size.height*0.8,
+            child: RoundedButton(
+          color: Color(0xff896b4f),
+          text: 'DRAW',
+          textColor: Color(0xffd9d9d9),
+          length: size*0.7,
+          press: () {},
+        ))
+        //0xffca956d
       ]),
     );
   }
