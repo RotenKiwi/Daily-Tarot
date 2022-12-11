@@ -15,13 +15,13 @@ class Home extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: [
             Color(0xff2c303c),
-            Color(0xff1B1F2E), //viridian : 6ca18b
+            Color(0xff040707), //viridian : 6ca18b
           ],
         ),
       ),
       child: Stack(alignment: Alignment.topCenter, children: <Widget>[
         Positioned(
-          top: size.height * 0.2,
+          top: size.height * 0.1,
           child: Text(
             date,
             style: TextStyle(
@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: size.height*0.25,
+          top: size.height * 0.15,
           child: Text(
             'Your Daily Card',
             style: TextStyle(
@@ -45,6 +45,57 @@ class Home extends StatelessWidget {
             ),
           ),
         ),
+        Positioned(
+          top: size.height * 0.23,
+          child: Container(
+            width: size.width * 0.7,
+            child: Text(
+              'Your Card of the Day resets at Midnight',
+              style: TextStyle(
+                decoration: TextDecoration.none,
+                color: Color(0xffd9d9d9),
+                fontFamily: 'Nova',
+                fontWeight: FontWeight.w300,
+                fontSize: size.width * 0.05,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+        Positioned(
+            top: size.height * 0.37,
+            child: Container(
+              width: size.width,
+              child: Stack(alignment: Alignment.center, children: <Widget>[
+                Positioned(
+                    left: size.width*0.1,
+                    child: Container(
+                      child: Transform.rotate(
+                        angle: -0.27,
+                        child: Image.asset(
+                          'assets/images/Chariot.png',
+                          height: size.height * 0.3,
+                        ),
+                      ),
+                    )),
+                Positioned(
+                    right: size.width*0.1,
+                    child: Transform.rotate(
+                      angle: 0.27,
+                      child: Image.asset(
+                        'assets/images/Chariot.png',
+                        height: size.height * 0.3,
+                      ),
+                    )),
+                Positioned(
+                  child: Image.asset(
+                    'assets/images/high-priestess.png',
+                    height: size.height * 0.35,
+                  ),
+                ),
+
+              ]),
+            ))
       ]),
     );
   }
