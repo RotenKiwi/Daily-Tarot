@@ -1,4 +1,5 @@
 import 'package:daily_tarot/Components/RoundedButton.dart';
+import 'package:daily_tarot/Screens/Card.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -97,14 +98,17 @@ class Home extends StatelessWidget {
               ]),
             )),
         Positioned(
-          top: size.height*0.8,
+            top: size.height * 0.8,
             child: RoundedButton(
-          color: Color(0xff896b4f),
-          text: 'DRAW',
-          textColor: Color(0xffd9d9d9),
-          length: size*0.7,
-          press: () {},
-        ))
+              color: Color(0xff896b4f),
+              text: 'DRAW',
+              textColor: Color(0xffd9d9d9),
+              length: size * 0.7,
+              press: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => CardPage()));
+              },
+            ))
         //0xffca956d
       ]),
     );
