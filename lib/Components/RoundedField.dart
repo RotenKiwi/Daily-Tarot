@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RoundedButton extends StatelessWidget {
+class RoundedField extends StatelessWidget {
   final String text;
   final Color color, textColor;
   final Size length;
 
-  const RoundedButton({
+  const RoundedField({
     Key? key,
     required this.text,
     required this.color,
@@ -18,14 +18,19 @@ class RoundedButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(40),
       child: Container(
+        height: 40,
           width: length.width,
           color: color,
           child: Text(
             text,
             style: TextStyle(
+              decoration: TextDecoration.none,
               color: textColor,
               fontSize: 25,
+              fontFamily: 'Nova',
+              height: 1.4,
             ),
+            textAlign: TextAlign.center,
           )),
     );
   }
