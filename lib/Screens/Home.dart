@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_intl/flutter_intl.dart';
+import 'package:intl/intl.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    String date = DateTime.now().toString();
+    String date = DateFormat('dd-MMMM-yyyy').format(DateTime.now());
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
