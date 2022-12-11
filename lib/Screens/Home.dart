@@ -5,6 +5,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -16,6 +17,9 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+      child: Stack(children: <Widget>[
+
+      ]),
     );
   }
 }
