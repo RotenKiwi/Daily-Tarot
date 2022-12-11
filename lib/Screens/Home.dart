@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    String date = DateFormat('dd-MMMM-yyyy').format(DateTime.now());
+    String date = DateFormat('dd MMMM yyyy').format(DateTime.now());
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -19,11 +19,32 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      child: Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
-Positioned(top: size.height*0.2,
-    child: Text(date))
+      child: Stack(alignment: Alignment.topCenter, children: <Widget>[
+        Positioned(
+          top: size.height * 0.2,
+          child: Text(
+            date,
+            style: TextStyle(
+              decoration: TextDecoration.none,
+              color: Color(0xffd9d9d9),
+              fontFamily: 'Nova',
+              fontSize: size.width * 0.04,
+            ),
+          ),
+        ),
+        Positioned(
+          top: size.height*0.25,
+          child: Text(
+            'Your Daily Card',
+            style: TextStyle(
+              decoration: TextDecoration.none,
+              color: Color(0xffd9d9d9),
+              fontFamily: 'Nova',
+              fontWeight: FontWeight.w800,
+              fontSize: size.width * 0.1,
+            ),
+          ),
+        ),
       ]),
     );
   }
